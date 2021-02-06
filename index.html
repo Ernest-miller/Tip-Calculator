@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "tipcalculator.css">
+    <!--  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--  -->
+    <title>Tip calculator</title>
+</head>
+<body>
+    <header>
+        <h1 id="title" class="title">Tip calculator</h1>
+        <h2 id="myName" class="myName"></h2>
+    </header>
+
+    <main id="main" class="main">
+        <section class="section menu">
+            <h2 class="menuheader">What do want to order</h2>
+
+            <form action="#link" onsubmit="getSubtotal">
+
+            <!-- appitizers -->
+                <h3 class="appitizersheader">Appitizers</h3>
+
+                    <!-- wings -->
+                <label for="wings">wings: $6.99
+                    <input type="checkbox" value="6.99" id="wings">
+                </label>
+                Qty <input type="number" value="" id="wingQty" min="1" max="3">
+
+                    <!-- queso -->
+                <label for="queso">queso: $6.99
+                    <input type="checkbox" value="6.99" id="queso">
+                </label>
+                Qty <input type="number" value="" id="quesoQty" min="1" max="3">
+
+                    <!-- guac -->
+                <label for="guac">guac: $6.99
+                    <input type="checkbox" value="6.99" id="guac">
+                </label>
+                Qty <input type="number" value="" id="guacQty" min="1" max="3">
+
+                    <!-- taco -->
+                <label for="taco">Taco: $6.99
+                    <input type="checkbox" value="6.99" id="taco">
+                </label>
+                Qty <input type="number" value="" id="tacoQty" min="1" max="3">
+
+                    <!-- burger -->
+                <label for="burger">burger: $6.99
+                    <input type="checkbox" value="6.99" id="burger">
+                </label>
+                Qty <input type="number" value="" id="burgerQty" min="1" max="3">
+
+                    <!-- burrito -->
+                <label for="burrito">burrito: $6.99
+                    <input type="checkbox" value="6.99" id="burrito">
+                </label>
+                Qty <input type="number" value="" id="burritoQty" min="1" max="3">
+
+            <!-- dessert -->
+                <h3 class="dessertheader">Dessert</h3>
+
+                    <!-- coffeecake -->
+                <label for="coffeecake">coffeecake: $6.99
+                    <input type="checkbox" value="6.99" id="coffeecake">
+                </label>
+                Qty <input type="number" value="" id="coffeecakeQty" min="1" max="3">
+
+                    <!-- cheesecake -->
+                <label for="cheesecake">cheesecake: $7.99
+                    <input type="checkbox" value="7.99" id="cheesecake">
+                </label>
+                Qty <input type="number" value="" id="cheesecakeQty" min="1" max="3">
+
+                    <!-- canoli -->
+                <label for="canoli">canoli: $9.99
+                    <input type="checkbox" value="9.99" id="canoli">
+                </label>
+                Qty <input type="number" value="" id="canoliQty" min="1" max="3">
+
+            <!-- beverages -->
+                <h3 class="beveragesheader">Beverages</h3>
+
+                    <!-- soda -->
+                <label for="soda">soda: $6.99
+                    <input type="checkbox" value="6.99" id="soda">
+                </label>
+                Qty <input type="number" value="" id="sodaQty" min="1" max="3">
+
+                    <!-- tea -->
+                <label for="Tea">Tea: $7.99
+                    <input type="checkbox" value="7.99" id="tea">
+                </label>
+                Qty <input type="number" value="" id="teaQty" min="1" max="3">
+
+                    <!-- water -->
+                
+                <label for="water">water: $9.99
+                    <input type="checkbox" value="9.99" id="water">
+                </label>
+                Qty <input type="number" value="" id="waterQty" min="1" max="3">
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+                <!-- receipt -->
+        <section class="section" id="receipt">
+            <h2 class="receiptheader">Receipt</h2>
+            <form action="#link" onsubmit="getTotal">
+            <p class="subtotal">Subtotal: $<span id="subtotaldisplay"></span></p>
+            <p>Tip<input type="number" value=""></p>
+            <input type="submit" value="Calculate">
+            </form>
+            <p class="subtotal">$<span id="receiptSub"></span></p>
+            <p class="taxTotal">Tax: $<span id="taxTotal"></span></p>
+            <p class="tipAmount">Tip: $ <span id="tipAmount"></span></p>
+            <p class="totalBill">Your total bill is $<span id="totalBill"></span></p>
+        </section>
+    </main>
+    <script src="tipcalculator.js"></script>
+</body>
+</html>
