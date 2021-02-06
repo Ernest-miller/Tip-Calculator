@@ -1,0 +1,25 @@
+* {box-sizing: border-box;}
+
+body {
+    background: whitesmoke;
+}
+
+
+h1, h2, h3 {
+    text-align: center;
+}
+.main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.section {
+    width: 40%;
+    border: 4px solid goldenrod;
+    background: darkred;
+    border-radius: 5px;
+}
+
+.lable {
+    display: block;
+}
